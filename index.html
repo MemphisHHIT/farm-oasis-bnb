@@ -332,12 +332,14 @@ section{padding:5rem 2rem}
 .location-section .section-title{color:white}
 .location-section .rule{background:var(--sage-light)}
 .loc-body p{color:rgba(255,255,255,0.78);font-size:15px;line-height:1.85;margin-bottom:1.1rem}
+/* ── location body links: white, no browser-blue ── */
+.loc-body a{color:rgba(255,255,255,0.92);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);transition:color 0.2s,border-color 0.2s}
+.loc-body a:hover{color:var(--gold-light);border-color:var(--gold-light)}
 .dist-list{list-style:none;margin-top:1rem}
 .dist-item{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:13.5px}
 .dist-item:last-child{border-bottom:none}
 .dist-item a{color:rgba(255,255,255,0.8);text-decoration:none;transition:color 0.2s}
 .dist-item a:hover{color:var(--gold-light)}
-.dist-plain{color:rgba(255,255,255,0.8)}
 .dist-time{color:var(--sage-light);font-weight:600;font-size:12px;background:rgba(255,255,255,0.08);padding:4px 11px;border-radius:20px;white-space:nowrap}
 .wildlife-box{margin-top:2rem;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:1.4rem}
 .wildlife-box p{margin:0;font-size:13.5px;color:rgba(255,255,255,0.75)}
@@ -388,11 +390,12 @@ section{padding:5rem 2rem}
 .rev-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.1)}
 /* screenshot thumbnail */
 .rev-thumb{
-  width:100%;height:130px;border-radius:5px;overflow:hidden;
+  width:100%;height:170px;border-radius:5px;overflow:hidden;
   border:1px solid var(--border-light);flex-shrink:0;
 }
-.rev-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 0.3s}
-.rev-card:hover .rev-thumb img{transform:scale(1.04)}
+.rev-thumb img{width:100%;height:100%;object-fit:cover;object-position:top left;
+  transform:scale(0.92);transform-origin:top left;transition:transform 0.3s}
+.rev-card:hover .rev-thumb img{transform:scale(0.97)}
 /* reviewer */
 .rev-who{display:flex;align-items:center;gap:8px}
 .rev-avatar{
@@ -789,14 +792,12 @@ footer p{color:rgba(255,255,255,0.55);line-height:1.75}
     <div class="rule"></div>
     <div class="amenities-grid">
       <div class="amenity"><span class="am-check">✓</span>Free high-speed WiFi</div>
-      <div class="amenity"><span class="am-check">✓</span>Living &amp; dining area</div>
       <div class="amenity"><span class="am-check">✓</span>Full kitchen appliances</div>
       <div class="amenity"><span class="am-check">✓</span>Rain shower — master bath</div>
-      <div class="amenity"><span class="am-check">✓</span>Bathtub</div>
       <div class="amenity"><span class="am-check">✓</span>Washer &amp; dryer in suite</div>
       <div class="amenity"><span class="am-check">✓</span>Dishwasher</div>
       <div class="amenity"><span class="am-check">✓</span>Smart TV</div>
-      <div class="amenity"><span class="am-check">✓</span>Heating throughout</div>
+      <div class="amenity"><span class="am-check">✓</span>Infloor Heating</div>
       <div class="amenity"><span class="am-check">✓</span>Free parking on premises</div>
       <div class="amenity"><span class="am-check">✓</span>Private entrance</div>
       <div class="amenity"><span class="am-check">✓</span>Patio &amp; outdoor seating</div>
@@ -823,7 +824,7 @@ footer p{color:rgba(255,255,255,0.55);line-height:1.75}
       <div class="amenity"><span class="am-check">✓</span>Cleaning products</div>
       <div class="amenity safety"><span class="am-check">🛡️</span>Interconnected smoke alarms</div>
       <div class="amenity safety"><span class="am-check">🛡️</span>Carbon monoxide alarm</div>
-      <div class="amenity safety"><span class="am-check">🛡️</span>3 lb fire extinguisher</div>
+      <div class="amenity safety"><span class="am-check">🛡️</span>Fire extinguisher</div>
       <div class="amenity safety"><span class="am-check">🛡️</span>First aid kit</div>
     </div>
   </div>
@@ -847,14 +848,14 @@ footer p{color:rgba(255,255,255,0.55);line-height:1.75}
     <div>
       <ul class="dist-list">
         <li class="dist-item"><a href="https://www.victoriaairport.com/" target="_blank" rel="noopener">✈️ &nbsp;Victoria Airport (YYJ)</a><span class="dist-time">2 min drive</span></li>
-        <li class="dist-item"><span class="dist-plain">🏖️ &nbsp;Pat Bay Beach</span><span class="dist-time">Steps away</span></li>
+	<li class="dist-item"><a href="https://share.google/wbha6LIpyqGbepPtW" target="_blank" rel="noopener">🏖️ &nbsp;Pat Bay Beach</a><span class="dist-time">2 min walk</span></li>
         <li class="dist-item"><a href="https://www.sidney.ca/" target="_blank" rel="noopener">🏘️ &nbsp;Sidney, BC</a><span class="dist-time">5 min drive</span></li>
         <li class="dist-item"><a href="https://www.bcferries.com/" target="_blank" rel="noopener">⛴️ &nbsp;BC Ferries — Swartz Bay</a><span class="dist-time">10 min drive</span></li>
         <li class="dist-item"><a href="https://www.butchartgardens.com/" target="_blank" rel="noopener">🌸 &nbsp;Butchart Gardens</a><span class="dist-time">15 min drive</span></li>
-        <li class="dist-item"><a href="https://www.tourismvictoria.com/" target="_blank" rel="noopener">🏛️ &nbsp;Downtown Victoria</a><span class="dist-time">~35 min drive</span></li>
-        <li class="dist-item"><span class="dist-plain">🥾 &nbsp;Hiking Trails</span><span class="dist-time">Nearby</span></li>
-        <li class="dist-item"><span class="dist-plain">🛒 &nbsp;Grocery, Shopping &amp; Restaurants</span><span class="dist-time">5 min drive</span></li>
-        <li class="dist-item"><span class="dist-plain">🍏 &nbsp;Sea Cider Farm &amp; Cidery</span><span class="dist-time">5 min drive</span></li>
+        <li class="dist-item"><a href="https://bcparks.ca/lau-welnew-john-dean-park/" target="_blank" rel="noopener">🏛️ &nbsp;Downtown Victoria</a><span class="dist-time">~35 min drive</span></li>
+	<li class="dist-item"><a href="https://www.tourismvictoria.com/" target="_blank" rel="noopener">🥾 &nbsp;Hiking Trails</a><span class="dist-time">~5 min drive</span></li>
+	<li class="dist-item"><a href="https://www.surlymermaid.ca/" target="_blank" rel="noopener">🛒 &nbsp;Grocery, Shopping &amp; Restaurants</a><span class="dist-time">~5 min drive</span></li>
+        <li class="dist-item"><a href="https://seacider.ca/" target="_blank" rel="noopener">🍏 &nbsp;Sea Cider Farm &amp; Cidery</a><span class="dist-time">5 min drive</span></li>
       </ul>
     </div>
   </div>
